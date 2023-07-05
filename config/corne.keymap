@@ -7,6 +7,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define default_layer 0
+#define lower_layer   1
+#define raise_layer   2
+
 / {
     keymap {
         compatible = "zmk,keymap";
