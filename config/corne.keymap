@@ -23,10 +23,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&trans        &kp Q        &kp W        &kp F  &mt LC(P) P        &kp B            &kp J      &kp L                          &kp U    &kp Y  &kp SEMICOLON  &trans
-&trans  &mt LC(A) A        &kp R  &mt LC(S) S        &kp T        &kp G            &kp M      &kp N                          &kp E    &kp I    &mt LC(O) O  &trans
-&trans  &mt LC(Z) Z  &mt LC(X) X  &mt LC(C) C        &kp D  &mt LC(V) V            &kp K      &kp H                      &kp COMMA  &kp DOT       &kp FSLH  &trans
-                                        &to 1    &kp LSHFT    &kp SPACE    &kp BACKSPACE  &kp ENTER  &mt LC(LEFT_ALT) LEFT_CONTROL
+&trans  &kp Q  &kp W  &kp F      &kp P      &kp B            &kp J      &kp L             &kp U    &kp Y  &kp SEMICOLON  &trans
+&trans  &kp A  &kp R  &kp S      &kp T      &kp G            &kp M      &kp N             &kp E    &kp I          &kp O  &trans
+&trans  &kp Z  &kp X  &kp C      &kp D      &kp V            &kp K      &kp H         &kp COMMA  &kp DOT       &kp FSLH  &trans
+                      &to 1  &kp LSHFT  &kp SPACE    &kp BACKSPACE  &kp ENTER  &kp LEFT_CONTROL
             >;
         };
 
@@ -38,10 +38,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &kp ESCAPE      &kp K_PLAY_PAUSE             &kp K_PREV      &kp K_NEXT              &to 2    &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK  &trans
+&trans      &kp ESCAPE      &kp K_PLAY_PAUSE             &kp K_PREV      &kp K_NEXT       &kp QUESTION    &kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK  &trans
 &trans         &kp TAB             &kp COLON          &kp BACKSLASH  &kp APOSTROPHE  &kp DOUBLE_QUOTES    &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6     &kp MINUS  &trans
-&trans  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS        &kp EXCL       &kp QUESTION     &kp BSPC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp PLUS  &trans
-                                                              &to 0  &kp LEFT_SHIFT          &kp SPACE       &kp N0    &kp PERIOD    &kp RETURN
+&trans  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS        &kp EXCL     &kp LEFT_SHIFT     &kp BSPC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp PLUS  &trans
+                                                              &to 0           &to 2              &to 3       &kp N0    &kp PERIOD    &kp RETURN
             >;
         };
 
@@ -53,10 +53,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans    &kp ESC       &kp HOME  &kp LESS_THAN  &kp GREATER_THAN            &to 1       &kp LEFT_ARROW    &kp UP_ARROW  &kp RIGHT_ARROW  &kp LPAR  &kp RPAR  &trans
+&trans    &kp ESC       &kp HOME  &kp LESS_THAN  &kp GREATER_THAN           &trans       &kp LEFT_ARROW    &kp UP_ARROW  &kp RIGHT_ARROW  &kp LPAR  &kp RPAR  &trans
 &trans    &kp TAB    &kp PAGE_UP   &kp C_BRI_UP   &kp C_VOLUME_UP       &kp DELETE      &kp K_SCROLL_UP  &kp DOWN_ARROW         &kp LBKT  &kp RBKT  &kp BSLH  &trans
 &trans  &kp MINUS  &kp PAGE_DOWN  &kp C_BRI_DEC      &kp C_VOL_DN  &kp PRINTSCREEN    &kp K_SCROLL_DOWN          &trans         &kp LBRC  &kp RBRC  &kp PIPE  &trans
-                                          &to 0    &kp LEFT_SHIFT        &kp SPACE              &kp RET          &trans           &trans
+                                          &to 0             &to 1            &to 3              &kp RET          &trans           &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans     &trans     &trans     &trans     &trans  &trans       &trans     &trans     &trans  &trans  &trans  &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans    &kp LC(S)  &kp LC(O)  &kp LC(P)  &trans  &trans  &trans
+&trans     &trans     &trans     &trans     &trans  &trans       &trans     &trans     &trans  &trans  &trans  &trans
+                                  &to 0      &to 1   &to 2       &trans     &trans     &trans
             >;
         };
     };
